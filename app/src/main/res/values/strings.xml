@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Movie Directory</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="playnow">Now Playing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
+    <string name="notif">Notification</string>
+
+
+    <string name="title_activity_loading">LoadingActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading_text">Loading</string>
+    <string name="detail">Detail</string>
+    <string name="fav">Favorite</string>
+    <string name="release_text">Release date</string>
+    <string name="search_hint">Input text</string>
+    <string name="def_btn_search">Search</string>
+    <string name="toast_add_fav">Add movie to favorite</string>
+    <string name="toast_empty">Favorite is empty</string>
+    <string name="toast_duplicate_fav">Movie already add as favorite</string>
+    <string name="appwidget_text">Example</string>
+    <string name="add_widget">Add widget</string>
+
+    <string name="empty_text">No Data</string>
+    <string name="alarm">Notification</string>
+
+    <string name="message">We are missing you</string>
+    <string name="set_alarm">Setting up Notification</string>
+    <string name="off_alarm">Canceling Notification</string>
+    <string name="btn_on_alarm">Set Notification</string>
+    <string name="btn_off_alarm">Cancel Notification</string>
+
+    <string name="new_movie">Now Playing: </string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.ariflaksito.moviedirectory">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="net.ariflaksito.moviedirectory.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="net.ariflaksito.moviedirectory.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/movie_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/movie_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.DetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".Activities.SetNotifActivity"
+            android:label="@string/notif"></activity>
+        <activity
+            android:name=".Activities.LoadingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".Provider.MovieProvider"
+            android:authorities="net.ariflaksito.moviedirectory"
+            android:exported="true"
+            android:readPermission="net.ariflaksito.moviedirectory.READ_DATABASE"
+            android:writePermission="net.ariflaksito.moviedirectory.WRITE_DATABASE" />
+
+        <receiver android:name=".Provider.ImageWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/image_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".Widgets.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name=".Alarm.AlarmBroadcast"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+    </application>
+
+</manifest>
